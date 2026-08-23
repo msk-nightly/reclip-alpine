@@ -10,9 +10,9 @@ if ! command -v python3 &> /dev/null; then
     missing="$missing python3"
 fi
 
-if ! command -v yt-dlp &> /dev/null; then
-    missing="$missing yt-dlp"
-fi
+# if ! command -v yt-dlp &> /dev/null; then
+#     missing="$missing yt-dlp"
+# fi
 
 if ! command -v ffmpeg &> /dev/null; then
     missing="$missing ffmpeg"
@@ -26,7 +26,7 @@ if [ -n "$missing" ]; then
     elif command -v brew &> /dev/null; then
         echo "Install with:  brew install$missing"
     elif command -v apt &> /dev/null; then
-        echo "Install with:  sudo apt install$missing"
+        echo "Install with:  apt install$missing"
     else
         echo "Please install:$missing"
     fi
