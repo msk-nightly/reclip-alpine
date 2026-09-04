@@ -48,7 +48,7 @@ fi
 # frequently, and the usual fix is simply updating yt-dlp. Skip with RECLIPPY_NO_UPDATE=1.
 if [ -z "$RECLIPPY_NO_UPDATE" ]; then
     echo "Updating yt-dlp..."
-    pip install -q -U yt-dlp || echo "  (couldn't update yt-dlp — continuing with the installed version)"
+    pip install -q -U yt-dlp || echo "\nCouldn't update yt-dlp :( Continuing with the existing version...\n"
 fi
 
 PORT="${PORT:-8899}"
